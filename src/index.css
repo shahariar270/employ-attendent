@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.edit {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded
+  }
+.delete{
+    @apply bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded
+}
+.present{
+    @apply bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded
+}
+.absent{
+    @apply bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded
+}
