@@ -94,10 +94,11 @@ export default function App() {
             <input
               type="text"
               placeholder="Enter Employee Name"
+              className="px-2 py-4 focus:outline-none outline-double outline-green-500"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            <button type="submit">{edit ? "Update Employ" : "Add Employ"}</button>
+            <button className="m-2 px-4 py-2 text-white bg-slate-700 rounded" type="submit">{edit ? "Update Employ" : "Add Employ"}</button>
           </form>
         </div>
       </div>
@@ -107,14 +108,14 @@ export default function App() {
           <h1 className="text-2xl text-sky-500">All Students</h1>
           <ul className="list-disc">
             {attend.map((item) => (
-              <li className="flex justify-evenly items-center w-[250px] my-3" key={item.id}>
-                <span>{item.title}</span>
-                <div className="m-auto flex items-center justify-between">
-                  <button className="m-2 edit" onClick={() => editHandle(item.id)}>Edit</button>
-                  <button className="m-2 delete" onClick={() => deleteHandle(item.id)}>Delete</button>
-                  <button className="m-2 present" onClick={() => presentHandle(item.id)}>Present</button>
-                  <button className="m-2 absent" onClick={() => absentHandle(item.id)}>Absent</button>
-                </div>
+              <li className="w-[100%] h-10  flex justify-center  items-center  my-3" key={item.id}>
+                <span className="mx-6">{item.title}</span>
+               
+                  <button className="m-1 edit" onClick={() => editHandle(item.id)}>Edit</button>
+                  <button className="m-1 delete" onClick={() => deleteHandle(item.id)}>Delete</button>
+                  <button className="m-1 present" onClick={() => presentHandle(item.id)}>Present</button>
+                  <button className="m-1 absent" onClick={() => absentHandle(item.id)}>Absent</button>
+               
               </li>
             ))}
           </ul>
